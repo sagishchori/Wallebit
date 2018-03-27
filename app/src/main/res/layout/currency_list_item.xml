@@ -2,6 +2,56 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="@dimen/list_item_height"
+    android:paddingLeft="@dimen/base_margin"
+    android:paddingRight="@dimen/base_margin">
+    
+    <wallebit.sagishchori.com.wallebit.views.CircleImageView
+        android:id="@+id/currency_list_item_icon_imageView"
+        android:layout_width="@dimen/image_width"
+        android:layout_height="@dimen/image_height"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:id="@+id/currency_list_item_currency_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_item_right_left_padding"
+        android:gravity="center|left"
+        android:text="Currency name"
+        android:textSize="@dimen/text_size_normal"
+        android:layout_alignTop="@+id/currency_list_item_icon_imageView"/>
+
+    <TextView
+        android:id="@+id/currency_list_item_currency_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_item_right_left_padding"
+        android:gravity="center|left"
+        android:text="Currency symbol"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignBottom="@+id/currency_list_item_icon_imageView"/>
+
+    <TextView
+        android:id="@+id/currency_list_item_currency_bit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/list_item_right_left_padding"
+        android:gravity="center|left"
+        android:text="0.00BTC"
+        android:textSize="@dimen/text_size_xsmall"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/currency_list_item_currency_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|right"
+        android:text="0.00USD"
+        android:textSize="@dimen/text_size_xsmall"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

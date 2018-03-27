@@ -72,8 +72,10 @@ public class MainCurrencyListActivity extends AppCompatActivity
         FragmentTransaction transaction = manager.beginTransaction();
 
         // TODO: Need to add a support for replacing multiple fragments.
-        MainCurrencyListFragment fragment = new MainCurrencyListFragment();
+        MainCurrencyListFragment fragment = MainCurrencyListFragment.getInstance(null);
 
         transaction.replace(R.id.content_frame, fragment, MainCurrencyListFragment.TAG);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }
