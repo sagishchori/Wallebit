@@ -1,3 +1,20 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Application base dimensions -->
+    <dimen name="list_item_right_left_padding">72dp</dimen>
+    <dimen name="list_item_top_bottom_padding">20dp</dimen>
+    <dimen name="base_margin">16dp</dimen>
+    <dimen name="half_base_margin">8dp</dimen>
+    <dimen name="quarter_base_margin">4dp</dimen>
+
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_xsmall">12sp</dimen>
+
+
+    <!-- Currency list item dimensions -->
+    <dimen name="list_item_height">72dp</dimen>
+    <dimen name="image_width">40dp</dimen>
+    <dimen name="image_height">40dp</dimen>
 </resources>
