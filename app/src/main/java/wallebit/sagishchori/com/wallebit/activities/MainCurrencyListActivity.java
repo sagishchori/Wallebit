@@ -1,5 +1,7 @@
-package wallebit.sagishchori.com.wallebit;
+package wallebit.sagishchori.com.wallebit.activities;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,14 +11,17 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+import wallebit.sagishchori.com.wallebit.fragments.MainCurrencyListFragment;
+import wallebit.sagishchori.com.wallebit.R;
+
+public class MainCurrencyListActivity extends AppCompatActivity
 {
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_currency_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -30,6 +35,8 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+
+        addFragmentToView();
     }
 
     @Override
@@ -54,5 +61,19 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * A method to add fragments to view
+     */
+    private void addFragmentToView()
+    {
+        FragmentManager manager = getFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+
+        // TODO: Need to add a support for replacing multiple fragments.
+        MainCurrencyListFragment fragment = new MainCurrencyListFragment();
+
+        transaction.replace(R.id.content_frame, fragment, MainCurrencyListFragment.TAG);
     }
 }
