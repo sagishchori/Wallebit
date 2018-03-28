@@ -31,9 +31,9 @@ public class CircleImageView extends android.support.v7.widget.AppCompatImageVie
         super(context, attrs, defStyleAttr);
     }
 
-    @Override
-    protected void onDraw(Canvas canvas)
-    {
+//    @Override
+//    protected void onDraw(Canvas canvas)
+//    {
 //        Drawable drawable = getDrawable();
 //
 //        if (drawable == null)
@@ -50,7 +50,7 @@ public class CircleImageView extends android.support.v7.widget.AppCompatImageVie
 //        Bitmap roundBitmap = getCroppedBitmap(bitmap, w);
 //
 //        canvas.drawBitmap(roundBitmap, 0, 0, null);
-    }
+//    }
 
     private Bitmap getCroppedBitmap(Bitmap bitmap, int radius)
     {
