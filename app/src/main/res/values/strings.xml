@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Wallebit</string>
     <string name="action_settings">Settings</string>
+
+    <!-- SearchView text -->
+    <string name="searchView_hint">Search coin</string>
 </resources>
