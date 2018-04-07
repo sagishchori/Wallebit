@@ -23,7 +23,7 @@ public class SearchableActivity extends AppCompatActivity
 
         setContentView(R.layout.activity_search);
 
-        progressBar = (ProgressBar) findViewById(R.id.search_list_progressBar);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         recyclerView = (RecyclerView) findViewById(R.id.search_list_recyclerView);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
