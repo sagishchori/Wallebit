@@ -11,7 +11,7 @@ public class CurrencyPriceDataModel extends CurrencyBaseDataModel
     private ArrayList<String> currencyConversionCoins;
 
     @Override
-    protected String getSymbol()
+    public String getSymbol()
     {
         return symbol;
     }
@@ -35,7 +35,7 @@ public class CurrencyPriceDataModel extends CurrencyBaseDataModel
     }
 
     @Override
-    protected String getName()
+    public String getName()
     {
         return name;
     }

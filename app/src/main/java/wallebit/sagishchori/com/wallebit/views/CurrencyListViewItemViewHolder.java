@@ -54,7 +54,7 @@ public class CurrencyListViewItemViewHolder extends RecyclerView.ViewHolder
     {
         setCurrencyName(model.getName());
         setCurrencySymbol(model.getSymbol());
-        setCurrencyBitPrice(model.getPriceBtc());
-        setCurrencyPrice(model.getPriceUsd());
+//        setCurrencyBitPrice(model.getPriceBtc());
+//        setCurrencyPrice(model.getPriceUsd());
     }
 }

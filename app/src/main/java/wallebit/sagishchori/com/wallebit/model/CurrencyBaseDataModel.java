@@ -9,7 +9,7 @@ public abstract class CurrencyBaseDataModel
     protected String id;
     protected String coinName;
 
-    protected abstract String getSymbol();
+    public abstract String getSymbol();
 
     protected abstract void setSymbol(String symbol);
 
@@ -17,7 +17,7 @@ public abstract class CurrencyBaseDataModel
 
     protected abstract void setAlgorithm(String algorithm);
 
-    protected abstract String getName();
+    public abstract String getName();
 
     protected abstract void setName(String name);
 

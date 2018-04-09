@@ -13,7 +13,7 @@ public class CurrencyDataModel extends CurrencyBaseDataModel
 	private boolean sponsored;
 
 	@Override
-	protected String getSymbol()
+	public String getSymbol()
 	{
 		return symbol;
 	}
@@ -37,7 +37,7 @@ public class CurrencyDataModel extends CurrencyBaseDataModel
 	}
 
 	@Override
-	protected String getName()
+	public String getName()
 	{
 		return name;
 	}
