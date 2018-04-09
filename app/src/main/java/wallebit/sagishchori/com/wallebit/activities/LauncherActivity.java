@@ -14,10 +14,14 @@ import java.util.TimerTask;
 import wallebit.sagishchori.com.wallebit.R;
 import wallebit.sagishchori.com.wallebit.dataManagers.CoinDataManager;
 import wallebit.sagishchori.com.wallebit.restClient.HttpTaskResponse;
-import wallebit.sagishchori.com.wallebit.utils.ConnectionUtils;
 
 public class LauncherActivity extends AppCompatActivity
 {
+    /**
+     * Time delay in millisecond.
+     */
+    private static final int CLOSING_APP_DELAY = 4000;
+
     private CoinDataManager coinDataManager;
     private ProgressBar progressBar;
 
@@ -40,6 +44,9 @@ public class LauncherActivity extends AppCompatActivity
         finish();
     }
 
+    /**
+     * Initial call to fetch all coins' data when each time launching the Application.
+     */
     private void fetchAllCoinsData()
     {
         coinDataManager = CoinDataManager.getInstance(getApplicationContext());
@@ -54,13 +61,19 @@ public class LauncherActivity extends AppCompatActivity
             @Override
             public void onTaskFailed()
             {
+                // In case fetching the data fails, notify the user (on the UI thread) and close the App.
                 runOnUiThread(new Runnable()
                 {
                     @Override
                     public void run()
                     {
+                        // Hide the {@link ProgressBar}.
                         progressBar.setVisibility(View.INVISIBLE);
-                        Toast.makeText(LauncherActivity.this, "An error occurred while fetching the data", Toast.LENGTH_LONG).show();
+
+                        // Show the error message to the user.
+                        Toast.makeText(LauncherActivity.this, getResources().getString(R.string.error_fetching_data), Toast.LENGTH_LONG).show();
+
+                        // Start Timer to close the App.
                         new Timer().schedule(new TimerTask()
                         {
                             @Override
@@ -68,7 +81,7 @@ public class LauncherActivity extends AppCompatActivity
                             {
                                 finish();
                             }
-                        }, 4000);
+                        }, CLOSING_APP_DELAY);
                     }
                 });
             }
@@ -79,9 +92,7 @@ public class LauncherActivity extends AppCompatActivity
     protected void onDestroy()
     {
         if (coinDataManager != null)
-        {
             coinDataManager.close();
-        }
 
         super.onDestroy();
     }

@@ -14,7 +14,6 @@ import wallebit.sagishchori.com.wallebit.views.CurrencyListViewItemViewHolder;
 
 public class CurrencyListAdapter extends RecyclerView.Adapter<CurrencyListViewItemViewHolder>
 {
-
     private ArrayList<CurrencyDataModel> currencyList;
 
     public CurrencyListAdapter(ArrayList<CurrencyDataModel> currencyList)
@@ -47,6 +46,4 @@ public class CurrencyListAdapter extends RecyclerView.Adapter<CurrencyListViewIt
         else
             return currencyList.size();
     }
-
-
 }

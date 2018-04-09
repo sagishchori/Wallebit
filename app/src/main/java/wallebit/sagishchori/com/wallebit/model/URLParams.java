@@ -3,17 +3,17 @@ package wallebit.sagishchori.com.wallebit.model;
 public class URLParams
 {
     /**
-     * From Symbol
+     * From Symbol.
      */
     private String fsym;
 
     /**
-     * To Symbols, include multiple symbols
+     * To Symbols, include multiple symbols.
      */
     private String tsyms;
 
     /**
-     * Name of exchange. Default: CCCAGG
+     * Name of exchange. Default: CCCAGG.
      */
     private String exchange;
 

@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class CurrencyPriceDataModel extends CurrencyBaseDataModel
 {
     /**
-     * {@link ArrayList} for all the coins to convert the requested coin to
+     * {@link ArrayList} for all the coins to convert the requested coin to.
+     *
      * (Example: convert BTC to USD, ETH etc.)
      */
     private ArrayList<String> currencyConversionCoins;

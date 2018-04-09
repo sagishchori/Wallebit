@@ -7,9 +7,10 @@ import android.net.NetworkInfo;
 public class ConnectionUtils
 {
     /**
-     * A method to know if there is a connectivity
-     * @param context
-     * @return          true - if connected, false - if not connected
+     * A method to know if there is a connectivity.
+     *
+     * @param       {@param context}.
+     * @return      true - if connected, false - if not connected.
      */
     public static boolean isOnLine(Context context)
     {

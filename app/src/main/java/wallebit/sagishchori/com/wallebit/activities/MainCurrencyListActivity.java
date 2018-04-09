@@ -4,15 +4,14 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import wallebit.sagishchori.com.wallebit.fragments.MainCurrencyListFragment;
 import wallebit.sagishchori.com.wallebit.R;
+import wallebit.sagishchori.com.wallebit.fragments.MainCurrencyListFragment;
 
 public class MainCurrencyListActivity extends AppCompatActivity
 {
@@ -63,7 +62,7 @@ public class MainCurrencyListActivity extends AppCompatActivity
     }
 
     /**
-     * A method to add fragments to view
+     * A method to add fragments to view.
      */
     private void addFragmentToView()
     {

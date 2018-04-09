@@ -3,8 +3,6 @@ package wallebit.sagishchori.com.wallebit.restClient;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -36,11 +34,14 @@ public class HttpGetTask extends AsyncTask<RestAPIClient, Void, String>
     @Override
     protected void onPreExecute()
     {
+        // Checking for connectivity.
         if (!ConnectionUtils.isOnLine(context))
         {
+            // In case there is no connectivity notify the activity.
             if (httpTaskResponse != null)
                 httpTaskResponse.onTaskFailed();
 
+            //  And cancel the {@link AsyncTask}.
             cancel(true);
         }
     }
@@ -68,6 +69,7 @@ public class HttpGetTask extends AsyncTask<RestAPIClient, Void, String>
 
             connection.connect();
 
+            // Get the response code.
             int responseCode = connection.getResponseCode();
 
             if (responseCode == HttpURLConnection.HTTP_OK)
@@ -131,6 +133,11 @@ public class HttpGetTask extends AsyncTask<RestAPIClient, Void, String>
         return buffer.toString();
     }
 
+    /**
+     * A setter for DataManager.
+     *
+     * @param dataManager   The {@param dataManager} to set.
+     */
     public void setDataManager(AbstractDataManager dataManager)
     {
         this.dataManager = dataManager;

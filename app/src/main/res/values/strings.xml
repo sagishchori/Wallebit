@@ -4,4 +4,7 @@
 
     <!-- SearchView text -->
     <string name="searchView_hint">Search coin</string>
+
+    <!-- LauncherActivity -->
+    <string name="error_fetching_data">An error occurred while fetching the data, please check your network connection</string>
 </resources>
