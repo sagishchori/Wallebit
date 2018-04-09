@@ -2,6 +2,8 @@ package wallebit.sagishchori.com.wallebit.restClient;
 
 import android.content.Context;
 
+import wallebit.sagishchori.com.wallebit.dataManagers.AbstractDataManager;
+import wallebit.sagishchori.com.wallebit.dataManagers.CoinDataManager;
 import wallebit.sagishchori.com.wallebit.utils.ConnectionUtils;
 
 public class RestAPIClient
@@ -12,6 +14,7 @@ public class RestAPIClient
     private String urlParams;
 
     private HttpGetTask getTask;
+    private AbstractDataManager dataManager;
 
     private RestAPIClient(Context context)
     {
@@ -48,6 +51,7 @@ public class RestAPIClient
         cancelGetTask();
 
         getTask = new HttpGetTask(getFullURL(), taskResponse, context);
+        getTask.setDataManager(dataManager);
         getTask.execute(this);
 
     }
@@ -56,5 +60,10 @@ public class RestAPIClient
     {
         if (getTask != null)
             getTask.cancel(true);
+    }
+
+    public void setDataManager(AbstractDataManager dataManager)
+    {
+        this.dataManager = dataManager;
     }
 }

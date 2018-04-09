@@ -42,11 +42,11 @@ public class LauncherActivity extends AppCompatActivity
 
     private void fetchAllCoinsData()
     {
-        coinDataManager = new CoinDataManager(getApplicationContext());
-        coinDataManager.getAllCoinsDataList(false, new HttpTaskResponse()
+        coinDataManager = CoinDataManager.getInstance(getApplicationContext());
+        coinDataManager.getAllCoinsDataList(false, new HttpTaskResponse<String>()
         {
             @Override
-            public void onTaskCompleted()
+            public void onTaskCompleted(String object)
             {
                 startMainCurrencyListActivity();
             }
@@ -54,12 +54,12 @@ public class LauncherActivity extends AppCompatActivity
             @Override
             public void onTaskFailed()
             {
-                progressBar.setVisibility(View.INVISIBLE);
                 runOnUiThread(new Runnable()
                 {
                     @Override
                     public void run()
                     {
+                        progressBar.setVisibility(View.INVISIBLE);
                         Toast.makeText(LauncherActivity.this, "An error occurred while fetching the data", Toast.LENGTH_LONG).show();
                         new Timer().schedule(new TimerTask()
                         {

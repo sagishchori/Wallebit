@@ -16,6 +16,7 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import wallebit.sagishchori.com.wallebit.dataManagers.AbstractDataManager;
 import wallebit.sagishchori.com.wallebit.utils.ConnectionUtils;
 
 public class HttpGetTask extends AsyncTask<RestAPIClient, Void, String>
@@ -23,6 +24,7 @@ public class HttpGetTask extends AsyncTask<RestAPIClient, Void, String>
     private final Context context;
     private String stringUrl;
     private HttpTaskResponse httpTaskResponse;
+    private AbstractDataManager dataManager;
 
     public HttpGetTask(String stringUrl, HttpTaskResponse httpTaskResponse, Context context)
     {
@@ -102,8 +104,10 @@ public class HttpGetTask extends AsyncTask<RestAPIClient, Void, String>
     {
         super.onPostExecute(s);
 
-        if (httpTaskResponse != null && s != null && !s.isEmpty())
-            httpTaskResponse.onTaskCompleted();
+        if (httpTaskResponse != null && s != null && !s.isEmpty()) {
+            dataManager.saveData(s);
+            httpTaskResponse.onTaskCompleted(null);
+        }
         else
             httpTaskResponse.onTaskFailed();
     }
@@ -123,8 +127,12 @@ public class HttpGetTask extends AsyncTask<RestAPIClient, Void, String>
                 readSize = maxReadSize;
             }
             buffer.append(rawBuffer, 0, readSize);
-            maxReadSize -= readSize;
         }
         return buffer.toString();
+    }
+
+    public void setDataManager(AbstractDataManager dataManager)
+    {
+        this.dataManager = dataManager;
     }
 }

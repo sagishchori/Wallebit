@@ -2,12 +2,12 @@ package wallebit.sagishchori.com.wallebit.model;
 
 public abstract class CurrencyBaseDataModel
 {
-    protected String symbol;
-    protected String algorithm;
-    protected String name;
-    protected String fullName;
-    protected String id;
-    protected String coinName;
+    protected String Symbol;
+    protected String Algorithm;
+    protected String Name;
+    protected String FullName;
+    protected String Id;
+    protected String CoinName;
 
     public abstract String getSymbol();
 

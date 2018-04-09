@@ -13,73 +13,73 @@ public class CurrencyPriceDataModel extends CurrencyBaseDataModel
     @Override
     public String getSymbol()
     {
-        return symbol;
+        return Symbol;
     }
 
     @Override
     protected void setSymbol(String symbol)
     {
-        this.symbol = symbol;
+        this.Symbol = symbol;
     }
 
     @Override
     protected String getAlgorithm()
     {
-        return algorithm;
+        return Algorithm;
     }
 
     @Override
     protected void setAlgorithm(String algorithm)
     {
-        this.algorithm = algorithm;
+        this.Algorithm = algorithm;
     }
 
     @Override
     public String getName()
     {
-        return name;
+        return Name;
     }
 
     @Override
     protected void setName(String name)
     {
-        this.name = name;
+        this.Name = name;
     }
 
     @Override
     protected String getFullName()
     {
-        return fullName;
+        return FullName;
     }
 
     @Override
     protected void setFullName(String fullName)
     {
-        this.fullName = fullName;
+        this.FullName = fullName;
     }
 
     @Override
     protected String getId()
     {
-        return id;
+        return Id;
     }
 
     @Override
     protected void setId(String id)
     {
-        this.id = id;
+        this.Id = id;
     }
 
     @Override
     protected String getCoinName()
     {
-        return coinName;
+        return CoinName;
     }
 
     @Override
     protected void setCoinName(String coinName)
     {
-        this.coinName = coinName;
+        this.CoinName = coinName;
     }
 
     public ArrayList<String> getCurrencyConversionCoins()
@@ -96,12 +96,12 @@ public class CurrencyPriceDataModel extends CurrencyBaseDataModel
     public String toString(){
         return
                 "CurrencyDataModel{" +
-                        "symbol = '" + symbol + '\'' +
-                        ",algorithm = '" + algorithm + '\'' +
-                        ",name = '" + name + '\'' +
-                        ",fullName = '" + fullName + '\'' +
-                        ",id = '" + id + '\'' +
-                        ",coinName = '" + coinName + '\'' +
+                        "symbol = '" + Symbol + '\'' +
+                        ",algorithm = '" + Algorithm + '\'' +
+                        ",name = '" + Name + '\'' +
+                        ",fullName = '" + FullName + '\'' +
+                        ",id = '" + Id + '\'' +
+                        ",coinName = '" + CoinName + '\'' +
                         ",currencyConversionCoins = '" + currencyConversionCoins.toString() + '\'' +
                         "}";
     }

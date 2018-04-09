@@ -1,8 +1,8 @@
 package wallebit.sagishchori.com.wallebit.restClient;
 
-public interface HttpTaskResponse
+public interface HttpTaskResponse<T>
 {
-    void onTaskCompleted();
+    void onTaskCompleted(T object);
 
     void onTaskFailed();
 }
