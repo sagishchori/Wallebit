@@ -2,179 +2,179 @@ package wallebit.sagishchori.com.wallebit.model;
 
 public class CurrencyDataModel extends CurrencyBaseDataModel
 {
-	private String imageUrl;
-	private String sortOrder;
-	private String totalCoinSupply;
-	private String url;
-	private String proofType;
-	private String preMinedValue;
-	private String totalCoinsFreeFloat;
-	private String fullyPremined;
-	private boolean sponsored;
+	private String ImageUrl;
+	private String SortOrder;
+	private String TotalCoinSupply;
+	private String Url;
+	private String ProofType;
+	private String PreMinedValue;
+	private String TotalCoinsFreeFloat;
+	private String FullyPremined;
+	private boolean Sponsored;
 
 	@Override
-	protected String getSymbol()
+	public String getSymbol()
 	{
-		return symbol;
+		return Symbol;
 	}
 
 	@Override
 	protected void setSymbol(String symbol)
 	{
-		this.symbol = symbol;
+		this.Symbol = symbol;
 	}
 
 	@Override
 	protected String getAlgorithm()
 	{
-		return algorithm;
+		return Algorithm;
 	}
 
 	@Override
 	protected void setAlgorithm(String algorithm)
 	{
-		this.algorithm = algorithm;
+		this.Algorithm = algorithm;
 	}
 
 	@Override
-	protected String getName()
+	public String getName()
 	{
-		return name;
+		return Name;
 	}
 
 	@Override
 	protected void setName(String name)
 	{
-		this.name = name;
+		this.Name = name;
 	}
 
 	@Override
 	protected String getFullName()
 	{
-		return fullName;
+		return FullName;
 	}
 
 	@Override
 	protected void setFullName(String fullName)
 	{
-		this.fullName = fullName;
+		this.FullName = fullName;
 	}
 
 	@Override
 	protected String getId()
 	{
-		return id;
+		return Id;
 	}
 
 	@Override
 	protected void setId(String id)
 	{
-		this.id = id;
+		this.Id = id;
 	}
 
 	@Override
 	protected String getCoinName()
 	{
-		return coinName;
+		return CoinName;
 	}
 
 	@Override
 	protected void setCoinName(String coinName)
 	{
-		this.coinName = coinName;
+		this.CoinName = coinName;
 	}
 
 	public void setImageUrl(String imageUrl){
-		this.imageUrl = imageUrl;
+		this.ImageUrl = imageUrl;
 	}
 
 	public String getImageUrl(){
-		return imageUrl;
+		return ImageUrl;
 	}
 
 	public void setSortOrder(String sortOrder){
-		this.sortOrder = sortOrder;
+		this.SortOrder = sortOrder;
 	}
 
 	public String getSortOrder(){
-		return sortOrder;
+		return SortOrder;
 	}
 
 	public void setTotalCoinSupply(String totalCoinSupply){
-		this.totalCoinSupply = totalCoinSupply;
+		this.TotalCoinSupply = totalCoinSupply;
 	}
 
 	public String getTotalCoinSupply(){
-		return totalCoinSupply;
+		return TotalCoinSupply;
 	}
 
 	public void setUrl(String url){
-		this.url = url;
+		this.Url = url;
 	}
 
 	public String getUrl(){
-		return url;
+		return Url;
 	}
 
 	public void setProofType(String proofType){
-		this.proofType = proofType;
+		this.ProofType = proofType;
 	}
 
 	public String getProofType(){
-		return proofType;
+		return ProofType;
 	}
 
 	public void setPreMinedValue(String preMinedValue){
-		this.preMinedValue = preMinedValue;
+		this.PreMinedValue = preMinedValue;
 	}
 
 	public String getPreMinedValue(){
-		return preMinedValue;
+		return PreMinedValue;
 	}
 
 	public void setTotalCoinsFreeFloat(String totalCoinsFreeFloat){
-		this.totalCoinsFreeFloat = totalCoinsFreeFloat;
+		this.TotalCoinsFreeFloat = totalCoinsFreeFloat;
 	}
 
 	public String getTotalCoinsFreeFloat(){
-		return totalCoinsFreeFloat;
+		return TotalCoinsFreeFloat;
 	}
 
 	public void setFullyPremined(String fullyPremined){
-		this.fullyPremined = fullyPremined;
+		this.FullyPremined = fullyPremined;
 	}
 
 	public String getFullyPremined(){
-		return fullyPremined;
+		return FullyPremined;
 	}
 
 	public void setSponsored(boolean sponsored){
-		this.sponsored = sponsored;
+		this.Sponsored = sponsored;
 	}
 
 	public boolean isSponsored(){
-		return sponsored;
+		return Sponsored;
 	}
 
 	@Override
  	public String toString(){
 		return 
 			"CurrencyDataModel{" + 
-			"symbol = '" + symbol + '\'' + 
-			",imageUrl = '" + imageUrl + '\'' + 
-			",sortOrder = '" + sortOrder + '\'' + 
-			",totalCoinSupply = '" + totalCoinSupply + '\'' + 
-			",algorithm = '" + algorithm + '\'' + 
-			",url = '" + url + '\'' + 
-			",name = '" + name + '\'' + 
-			",proofType = '" + proofType + '\'' + 
-			",preMinedValue = '" + preMinedValue + '\'' + 
-			",fullName = '" + fullName + '\'' + 
-			",totalCoinsFreeFloat = '" + totalCoinsFreeFloat + '\'' + 
-			",id = '" + id + '\'' + 
-			",fullyPremined = '" + fullyPremined + '\'' + 
-			",sponsored = '" + sponsored + '\'' + 
-			",coinName = '" + coinName + '\'' + 
+			"symbol = '" + Symbol + '\'' +
+			",imageUrl = '" + ImageUrl + '\'' +
+			",sortOrder = '" + SortOrder + '\'' +
+			",totalCoinSupply = '" + TotalCoinSupply + '\'' +
+			",algorithm = '" + Algorithm + '\'' +
+			",url = '" + Url + '\'' +
+			",name = '" + Name + '\'' +
+			",proofType = '" + ProofType + '\'' +
+			",preMinedValue = '" + PreMinedValue + '\'' +
+			",fullName = '" + FullName + '\'' +
+			",totalCoinsFreeFloat = '" + TotalCoinsFreeFloat + '\'' +
+			",id = '" + Id + '\'' +
+			",fullyPremined = '" + FullyPremined + '\'' +
+			",sponsored = '" + Sponsored + '\'' +
+			",coinName = '" + CoinName + '\'' +
 			"}";
 		}
 }

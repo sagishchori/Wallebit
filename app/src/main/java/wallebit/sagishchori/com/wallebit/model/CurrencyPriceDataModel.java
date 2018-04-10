@@ -5,81 +5,82 @@ import java.util.ArrayList;
 public class CurrencyPriceDataModel extends CurrencyBaseDataModel
 {
     /**
-     * {@link ArrayList} for all the coins to convert the requested coin to
+     * {@link ArrayList} for all the coins to convert the requested coin to.
+     *
      * (Example: convert BTC to USD, ETH etc.)
      */
     private ArrayList<String> currencyConversionCoins;
 
     @Override
-    protected String getSymbol()
+    public String getSymbol()
     {
-        return symbol;
+        return Symbol;
     }
 
     @Override
     protected void setSymbol(String symbol)
     {
-        this.symbol = symbol;
+        this.Symbol = symbol;
     }
 
     @Override
     protected String getAlgorithm()
     {
-        return algorithm;
+        return Algorithm;
     }
 
     @Override
     protected void setAlgorithm(String algorithm)
     {
-        this.algorithm = algorithm;
+        this.Algorithm = algorithm;
     }
 
     @Override
-    protected String getName()
+    public String getName()
     {
-        return name;
+        return Name;
     }
 
     @Override
     protected void setName(String name)
     {
-        this.name = name;
+        this.Name = name;
     }
 
     @Override
     protected String getFullName()
     {
-        return fullName;
+        return FullName;
     }
 
     @Override
     protected void setFullName(String fullName)
     {
-        this.fullName = fullName;
+        this.FullName = fullName;
     }
 
     @Override
     protected String getId()
     {
-        return id;
+        return Id;
     }
 
     @Override
     protected void setId(String id)
     {
-        this.id = id;
+        this.Id = id;
     }
 
     @Override
     protected String getCoinName()
     {
-        return coinName;
+        return CoinName;
     }
 
     @Override
     protected void setCoinName(String coinName)
     {
-        this.coinName = coinName;
+        this.CoinName = coinName;
     }
 
     public ArrayList<String> getCurrencyConversionCoins()
@@ -96,12 +97,12 @@ public class CurrencyPriceDataModel extends CurrencyBaseDataModel
     public String toString(){
         return
                 "CurrencyDataModel{" +
-                        "symbol = '" + symbol + '\'' +
-                        ",algorithm = '" + algorithm + '\'' +
-                        ",name = '" + name + '\'' +
-                        ",fullName = '" + fullName + '\'' +
-                        ",id = '" + id + '\'' +
-                        ",coinName = '" + coinName + '\'' +
+                        "symbol = '" + Symbol + '\'' +
+                        ",algorithm = '" + Algorithm + '\'' +
+                        ",name = '" + Name + '\'' +
+                        ",fullName = '" + FullName + '\'' +
+                        ",id = '" + Id + '\'' +
+                        ",coinName = '" + CoinName + '\'' +
                         ",currencyConversionCoins = '" + currencyConversionCoins.toString() + '\'' +
                         "}";
     }
